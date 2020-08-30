@@ -1,2 +1,3 @@
 shared:
-  api_url: https://api.zype.com/
+  api_url: https://api.zype.com
+  login_url: https://login.zype.com

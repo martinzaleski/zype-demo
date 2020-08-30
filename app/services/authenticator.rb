@@ -4,7 +4,7 @@ class Authenticator
   def initialize(client_id = nil, client_secret = nil, site = nil)
     @client_id = client_id || Rails.application.credentials[:client_id]
     @client_secret = client_secret || Rails.application.credentials[:client_secret]
-    @site = site || Rails.application.credentials[:site]
+    @site = site || Rails.application.config_for(:app)[:login_url]
   end
 
   def authenticate!(username, password)

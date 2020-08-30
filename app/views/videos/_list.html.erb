@@ -1,0 +1,16 @@
+<div class="grid row no-gutters">
+  <% videos.each do |video| %>
+    <div class="video col-lg-6 mb-4 px-3">
+        <div class="caption">
+          <div class="caption-content mb-1">
+            <%= link_to video.title, video, class: 'h3' %>
+            <p class="text-secondary">
+              <%= video.free? ? 'Free video' : 'Subscription Required' %>
+            </p>
+          </div>
+
+        </div>
+        <%= link_to image_tag(video.thumbnail_url, class: 'img-fluid') , video %>
+    </div>
+  <% end %>
+</div>

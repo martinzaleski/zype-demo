@@ -1,0 +1,16 @@
+<section class="show">
+<p id="notice"><%= notice %></p>
+
+<h1><%= @video.title %></h1>
+
+<div class="video">
+  <%= render @partial, video: @video %>
+</div>
+
+<p>
+  <strong>Description:</strong>
+  <%= @video.description %>
+</p>
+
+<%= link_to 'Back', videos_path %>
+</section>
